@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="scroll-progress"></div>
+
+    <nav>
+      <div class="logo">Porto<span>folio.</span></div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#education">Edukasi</a></li>
+        <li><a href="#certificates">Sertifikat</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li>
+          <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        </li>
+        <li>
+          <a href="assets/cv-anda.pdf" download class="cv-btn-nav"
+            >Download CV</a
+          >
+        </li>
+        <li><a href="#connect" class="nav-btn">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <header id="home" class="hero">
+      <div class="hero-container">
+        <div class="hero-image-area" data-aos="zoom-in">
+          <div class="blob-bg"></div>
+          <img src="assets/foto-clarissa.png" alt="Profile" class="profile-img" />
+        </div>
+        <div class="hero-content" data-aos="fade-left">
+          <span class="badge">Fresh Graduate & UI/UX Enthusiast</span>
+          <h1>Halo, Saya <span>Clarissa Habiba Farrah rachman</span></h1>
+          <p>
+            Membangun solusi digital yang estetis dan fungsional melalui desain
+            modern.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary">Lihat Portofolio</a>
+            <a
+              href="https://wa.me/6282129795442"
+              target="_blank"
+              class="btn-outline"
+            >
+              <i class="fab fa-whatsapp"></i> Chat Saya
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="education">
+      <h2 class="section-title" data-aos="fade-up">Pendidikan & Pengalaman Magang</h2>
+      <div class="edu-grid">
+        <div class="edu-item" data-aos="fade-up">
+          <span class="edu-year">2021 - 2025</span>
+          <h3>S1 Sistem Informasi</h3>
+          <p>Universitas Bina Sarana Informatika - IPK 3.69 / 4.00</p>
+        </div>
+        <div class="edu-item" data-aos="fade-up" data-aos-delay="100">
+          <span class="edu-year">2024</span>
+          <h3>Internship</h3>
+          <p>Dinas Informasi dan Pengolahan Data - Pengembangan Website Absensi.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title" data-aos="fade-up">Skill Teknis</h2>
+      <div class="skill-tags" data-aos="fade-up">
+        <span class="tag tag-design"
+          ><i class="fab fa-figma"></i> UI/UX Design</span
+        >
+        <span class="tag tag-frontend"><i class="fab fa-html5"></i> HTML</span>
+        <span class="tag tag-frontend"
+          ><i class="fab fa-css3-alt"></i> CSS</span
+        >
+        <span class="tag tag-frontend"
+          ><i class="fab fa-js"></i> JavaScript</span
+        >
+      </div>
+    </section>
+
+    <section id="certificates">
+      <h2 class="section-title" data-aos="fade-up">Sertifikasi</h2>
+      <div class="cert-list">
+        <a
+          href="assets/sertifikat1.pdf"
+          target="_blank"
+          class="cert-item"
+          data-aos="fade-up"
+        >
+          <div class="cert-info">
+            <h4>Analisis Pengembangan Perangkat Lunak </h4>
+            <p> Lembaga Sertifikasi Profesi Universitas Bina Sarana Informatika• 2024</p>
+          </div>
+          <div class="pdf-icon"><i class="fas fa-file-pdf"></i></div>
+        </a>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title" data-aos="fade-up">Proyek Pilihan</h2>
+      <div class="project-grid">
+        <div
+          class="project-card"
+          data-aos="fade-up"
+          onclick="openProject('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800', 
+                 'E-Commerce Dashboard', 'Aplikasi manajemen toko online responsif.')"
+        >
+          <div class="project-img-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600"
+              alt="Work"
+            />
+            <div class="project-overlay">
+              <div class="project-details"><h3>E-Commerce Dashboard</h3></div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="project-card"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          onclick="openProject('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800', 
+                 'Portfolio v1', 'Website portofolio pribadi dengan tema gelap.')"
+        >
+          <div class="project-img-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600"
+              alt="Work"
+            />
+            <div class="project-overlay">
+              <div class="project-details"><h3>Portfolio v1</h3></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="project-modal" class="modal-overlay">
+      <div class="modal-box">
+        <span class="close-modal" onclick="closeProject()">&times;</span>
+        <img id="modal-img" src="" alt="" class="modal-img" />
+        <div class="modal-info">
+          <h2 id="modal-title"></h2>
+          <p id="modal-desc"></p>
+          <br />
+          <a href="#" class="btn-primary">Kunjungi Link Proyek</a>
+        </div>
+      </div>
+    </div>
+
+    <section id="connect">
+      <h2 class="section-title" data-aos="fade-up">Mari Terhubung</h2>
+      <div class="connect-container">
+        <a href="#" target="_blank" class="connect-card" data-aos="zoom-in">
+          <i class="fab fa-linkedin"></i>
+          <h3>LinkedIn</h3>
+        </a>
+        <a
+          href="mailto:email@anda.com"
+          class="connect-card"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
+          <i class="fas fa-envelope"></i>
+          <h3>Email</h3>
+        </a>
+      </div>
+    </section>
+
+    <footer><p>&copy; 2026 Clarissa. All Rights Reserved.</p></footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+      window.onscroll = function () {
+        let winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        let height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        document.getElementById("scroll-progress").style.width =
+          (winScroll / height) * 100 + "%";
+      };
+      const themeToggle = document.getElementById("theme-toggle");
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("light-theme");
+        themeToggle.querySelector("i").classList.toggle("fa-moon");
+        themeToggle.querySelector("i").classList.toggle("fa-sun");
+      });
+      function openProject(img, title, desc) {
+        document.getElementById("modal-img").src = img;
+        document.getElementById("modal-title").innerText = title;
+        document.getElementById("modal-desc").innerText = desc;
+        document.getElementById("project-modal").classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+      function closeProject() {
+        document.getElementById("project-modal").classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+      window.onclick = (e) => {
+        if (e.target.classList.contains("modal-overlay")) closeProject();
+      };
+    </script>
+  </body>
+</html>
